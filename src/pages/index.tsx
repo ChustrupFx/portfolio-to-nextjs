@@ -1,4 +1,5 @@
 import GlobalStyle from "../styles/globalStyle";
+import Header from "../components/Header/Header";
 
 import type { NextPage } from "next";
 import { FaArrowDown } from "react-icons/fa";
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
   return (
     <>
       <GlobalStyle />
+      <Header />
       <Section>
         <Texts>
           <Name>Victor Inácio</Name>
