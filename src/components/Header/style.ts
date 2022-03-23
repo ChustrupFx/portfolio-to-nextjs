@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQueries from "../../styles/mediaQueries";
 
 export const Header = styled.header`
   width: 100%;
@@ -7,6 +8,10 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   z-index: 10;
+
+  @media (max-width: ${mediaQueries.medium}) {
+    display: none;
+  }
 `;
 
 export const Nav = styled.nav`

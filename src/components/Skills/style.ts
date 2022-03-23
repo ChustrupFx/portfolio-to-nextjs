@@ -9,7 +9,7 @@ export const SkillsContainer = styled.div`
   width: 100%;
 
   @media (max-width: ${mediaQueries.large}) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media (max-width: ${mediaQueries.medium}) {
