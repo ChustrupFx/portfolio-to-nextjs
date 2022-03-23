@@ -6,6 +6,7 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiNextdotjs,
 } from "react-icons/si";
 import { SkillsContainer, SkillItem, Label } from "./style";
 
@@ -15,6 +16,11 @@ const Skills: React.FC = () => {
       Component: SiReact,
       color: "#00D8FF",
       label: "React e React Native",
+    },
+    {
+      Component: SiNextdotjs,
+      color: "#000",
+      label: "NextJS",
     },
     {
       Component: SiLaravel,
