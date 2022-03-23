@@ -9,6 +9,7 @@ import { MainSection, Texts, Name, Occupation, ArrowButton } from "./styles";
 import Skills from "../components/Skills/Skills";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
       <Section title="Contato">
         <Contact />
       </Section>
+      <Footer />
     </>
   );
 };
