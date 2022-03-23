@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  min-height: 100vh;
   text-align: center;
   color: white;
   background-color: #182229;
