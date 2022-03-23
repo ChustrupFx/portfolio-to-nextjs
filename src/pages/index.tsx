@@ -11,6 +11,7 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import Divider from "../components/Divider/Divider";
+import Container from "../components/Container/Container";
 
 const Home: NextPage = () => {
   return (

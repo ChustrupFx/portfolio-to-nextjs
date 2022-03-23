@@ -48,4 +48,5 @@ export const ArrowButton = styled.button`
   position: absolute;
   bottom: 30px;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%);
 `;
