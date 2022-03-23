@@ -8,6 +8,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { MainSection, Texts, Name, Occupation, ArrowButton } from "./styles";
 import Skills from "../components/Skills/Skills";
 import AboutMe from "../components/AboutMe/AboutMe";
+import Contact from "../components/Contact/Contact";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +32,9 @@ const Home: NextPage = () => {
       </Section>
       <Section title="Sobre Mim">
         <AboutMe />
+      </Section>
+      <Section title="Contato">
+        <Contact />
       </Section>
     </>
   );

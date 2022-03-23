@@ -18,6 +18,11 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
+    a {
+        text-decoration: none;
+        color: initial;
+    }
+
 `;
 
 export default GlobalStyle;
