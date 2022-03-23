@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainSection = styled.section`
+export const MainSectionContainer = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -48,5 +48,9 @@ export const ArrowButton = styled.button`
   position: absolute;
   bottom: 30px;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-  transform: translate(-50%);
+  z-index: 5;
+
+  & path {
+    filter: invert(1);
+  }
 `;
