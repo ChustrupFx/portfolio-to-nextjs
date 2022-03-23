@@ -6,6 +6,7 @@ import Gallery from "../components/Gallery/Gallery";
 import type { NextPage } from "next";
 import { FaArrowDown } from "react-icons/fa";
 import { MainSection, Texts, Name, Occupation, ArrowButton } from "./styles";
+import Skills from "../components/Skills/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,9 @@ const Home: NextPage = () => {
       </MainSection>
       <Section title="Projetos">
         <Gallery />
+      </Section>
+      <Section title="Habilidades">
+        <Skills />
       </Section>
     </>
   );

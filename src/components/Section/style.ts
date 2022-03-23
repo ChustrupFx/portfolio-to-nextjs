@@ -6,7 +6,7 @@ export const Section = styled.section`
   text-align: center;
   color: white;
   background-color: #182229;
-  padding: 10px 3rem;
+  padding: 20px 10rem;
 `;
 
 export const Title = styled.h2`
