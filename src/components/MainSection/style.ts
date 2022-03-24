@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+type ArrowButtonsProps = {
+  animationDelay: string;
+};
 
 export const MainSectionContainer = styled.section`
   width: 100%;
@@ -39,7 +43,21 @@ export const Occupation = styled.h2`
   font-size: 32px;
 `;
 
-export const ArrowButton = styled.button`
+const buttonAnimation = keyframes`
+
+  from {
+    opacity: 0;
+    transform: translate(0, -150px);
+  } 
+  
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+`;
+
+export const ArrowButton = styled.button<ArrowButtonsProps>`
   outline: none;
   border-radius: 50%;
   border: none;
@@ -49,6 +67,8 @@ export const ArrowButton = styled.button`
   bottom: 30px;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
   z-index: 5;
+  animation: ${buttonAnimation} 1.5s ease 1 both;
+  animation-delay: ${(props) => props.animationDelay};
 
   & path {
     filter: invert(1);

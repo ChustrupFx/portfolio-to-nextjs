@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import {
   MainSectionContainer,
   Texts,
@@ -7,22 +6,18 @@ import {
   ArrowButton,
 } from "./style";
 import { FaArrowDown } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { Children, useEffect, useState } from "react";
 
-import WOW from "wowjs";
-const wow = new WOW.WOW({
-  live: true,
+import dynamic from "next/dynamic";
+const AOSAnimated = dynamic(() => import("../AOSAnimated/AOSAnimated"), {
+  ssr: false,
 });
 
 const MainSection: React.FC = () => {
   const nameToBeTyped = "Victor Inácio";
-  const typeTimeEachLetterInMS = 150;
-  const typeOfNameToBeFullyTypedInSeconds = (150 * nameToBeTyped.length) / 1000;
-
-  // useEffect(() => {
-  //   wow.init();
-  //   wow.sync();
-  // });
+  const typeTimeEachLetterInMS = 100;
+  const typeOfNameToBeFullyTypedInSeconds =
+    typeTimeEachLetterInMS * nameToBeTyped.length + 100;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,9 +34,20 @@ const MainSection: React.FC = () => {
     <MainSectionContainer>
       <Texts>
         <Name>{name}</Name>
-        <Occupation>Desenvolvedor Web</Occupation>
+
+        <Occupation
+          data-aos={"zoom-in"}
+          data-aos-delay={typeOfNameToBeFullyTypedInSeconds}
+          data-aos-duration={800}
+          data-aos-mirror="true"
+          data-aos-once="true"
+        >
+          Desenvolvedor Web
+        </Occupation>
       </Texts>
-      <ArrowButton>
+      <ArrowButton
+        animationDelay={`${typeOfNameToBeFullyTypedInSeconds + 800}ms`}
+      >
         <FaArrowDown size={30} />
       </ArrowButton>
     </MainSectionContainer>

@@ -19,10 +19,15 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/aos@next/dist/aos.css"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         </body>
       </Html>
     );

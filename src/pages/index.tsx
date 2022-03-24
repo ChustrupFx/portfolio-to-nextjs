@@ -10,6 +10,7 @@ import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import Divider from "../components/Divider/Divider";
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 
 const MainSection = dynamic(
   () => import("../components/MainSection/MainSection"),
@@ -19,6 +20,10 @@ const MainSection = dynamic(
 );
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <GlobalStyle />
