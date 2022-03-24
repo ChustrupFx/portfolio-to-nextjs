@@ -2,7 +2,7 @@ import { Image, ItemContainer } from "./style";
 
 const GalleryItem: React.FC<GalleryItemProps> = ({ coverImage, alt }) => {
   return (
-    <ItemContainer>
+    <ItemContainer data-aos="zoom-in">
       <Image src={coverImage} alt={alt} layout="fill" />
     </ItemContainer>
   );
