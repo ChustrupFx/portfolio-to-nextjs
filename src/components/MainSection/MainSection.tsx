@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   MainSectionContainer,
   Texts,
@@ -9,15 +10,24 @@ import { FaArrowDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 import WOW from "wowjs";
+const wow = new WOW.WOW({
+  live: true,
+});
 
 const MainSection: React.FC = () => {
+  const nameToBeTyped = "Victor Inácio";
   const typeTimeEachLetterInMS = 150;
+  const typeOfNameToBeFullyTypedInSeconds = (150 * nameToBeTyped.length) / 1000;
+
+  // useEffect(() => {
+  //   wow.init();
+  //   wow.sync();
+  // });
 
   useEffect(() => {
     const interval = setInterval(() => {
       typeNextNameLetter(interval);
     }, typeTimeEachLetterInMS);
-
     return () => {
       clearInterval(interval);
     };
@@ -39,7 +49,6 @@ const MainSection: React.FC = () => {
 
   function typeNextNameLetter(intervalVar: NodeJS.Timer) {
     setName((name) => {
-      const nameToBeTyped = "Victor Inácio";
       const nameToBeTypedLength = nameToBeTyped.length;
 
       const typedNameLength = name.length;
