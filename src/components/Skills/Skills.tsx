@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   SiLaravel,
   SiReact,
@@ -58,7 +59,12 @@ const Skills: React.FC = () => {
     <SkillsContainer>
       {svgs.map(({ Component, color, label }, index) => {
         return (
-          <SkillItem key={index}>
+          <SkillItem
+            data-aos="flip-left"
+            data-aos-delay={200 * index}
+            data-aos-easing="ease-in-out"
+            key={index}
+          >
             <div>
               <Component
                 size={"100%"}
