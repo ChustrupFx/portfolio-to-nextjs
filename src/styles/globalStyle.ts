@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 400;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     button {
         cursor: pointer;
     }

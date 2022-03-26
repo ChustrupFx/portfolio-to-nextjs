@@ -30,19 +30,19 @@ const Home: NextPage = () => {
       <Header />
       <MainSection />
 
-      <Section title="Projetos">
+      <Section title="Projetos" id="gallery">
         <Gallery />
       </Section>
       <Divider />
-      <Section title="Habilidades">
+      <Section title="Habilidades" id="skills">
         <Skills />
       </Section>
       <Divider />
-      <Section title="Sobre Mim">
+      <Section title="Sobre Mim" id="about-me">
         <AboutMe />
       </Section>
       <Divider />
-      <Section title="Contato">
+      <Section title="Contato" id="contact">
         <Contact />
       </Section>
       <Footer />

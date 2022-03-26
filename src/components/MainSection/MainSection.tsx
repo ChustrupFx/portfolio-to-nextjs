@@ -46,6 +46,7 @@ const MainSection: React.FC = () => {
         </Occupation>
       </Texts>
       <ArrowButton
+        href="#gallery"
         animationDelay={`${typeOfNameToBeFullyTypedInSeconds + 800}ms`}
       >
         <FaArrowDown size={30} />

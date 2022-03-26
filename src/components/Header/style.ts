@@ -29,16 +29,18 @@ export const NavList = styled.ul`
 
 export const ListItem = styled.li`
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
-export const ItemButton = styled.button`
+export const ItemLink = styled.a`
   height: 100%;
   color: white;
   font-size: 20px;
   padding: 0 5rem;
   border: none;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
+
+export const LinkText = styled.span``;

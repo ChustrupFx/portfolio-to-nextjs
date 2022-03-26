@@ -57,7 +57,7 @@ const buttonAnimation = keyframes`
 
 `;
 
-export const ArrowButton = styled.button<ArrowButtonsProps>`
+export const ArrowButton = styled.a<ArrowButtonsProps>`
   outline: none;
   border-radius: 50%;
   border: none;
@@ -71,6 +71,6 @@ export const ArrowButton = styled.button<ArrowButtonsProps>`
   animation-delay: ${(props) => props.animationDelay};
 
   & path {
-    filter: invert(1);
+    fill: black;
   }
 `;

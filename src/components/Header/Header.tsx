@@ -1,4 +1,4 @@
-import { Header as H, Nav, NavList, ListItem, ItemButton } from "./style";
+import { Header as H, Nav, NavList, ListItem, ItemLink } from "./style";
 
 const Header: React.FC = () => {
   return (
@@ -6,16 +6,16 @@ const Header: React.FC = () => {
       <Nav>
         <NavList>
           <ListItem>
-            <ItemButton>Portfólio</ItemButton>
+            <ItemLink href="#gallery">Portfólio</ItemLink>
           </ListItem>
           <ListItem>
-            <ItemButton>Habilidades</ItemButton>
+            <ItemLink href="#skills">Habilidades</ItemLink>
           </ListItem>
           <ListItem>
-            <ItemButton>Sobre Mim</ItemButton>
+            <ItemLink href="#about-me">Sobre Mim</ItemLink>
           </ListItem>
           <ListItem>
-            <ItemButton>Contato</ItemButton>
+            <ItemLink href="#contact">Contato</ItemLink>
           </ListItem>
         </NavList>
       </Nav>
