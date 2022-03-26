@@ -10,6 +10,7 @@ import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import Divider from "../components/Divider/Divider";
 import dynamic from "next/dynamic";
+import AOS from "aos";
 import { useEffect } from "react";
 
 const MainSection = dynamic(

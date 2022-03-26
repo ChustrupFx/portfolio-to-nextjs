@@ -3,7 +3,7 @@ import { Header as H, Nav, NavList, ListItem, ItemLink } from "./style";
 
 const Header: React.FC = () => {
   const [blackBG, setBlackBG] = useState(false);
-  const onScroll = useCallback((e: Event) => {
+  const onScroll = useCallback((e) => {
     if (window.scrollY > 60) {
       setBlackBG(true);
     } else {
@@ -18,6 +18,7 @@ const Header: React.FC = () => {
       document.removeEventListener("scroll", onScroll);
     };
   }, []);
+
   return (
     <H blackBG={blackBG}>
       <Nav>

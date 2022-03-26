@@ -17,7 +17,7 @@ export const Title = styled.h2`
 export const Content = styled.div``;
 
 export const Placeholder = styled.div`
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: -60px;
   left: 0;
