@@ -6,6 +6,7 @@ export const Section = styled.section`
   color: white;
   background-color: #182229;
   padding: 20px 0;
+  position: relative;
 `;
 
 export const Title = styled.h2`
@@ -14,3 +15,10 @@ export const Title = styled.h2`
 `;
 
 export const Content = styled.div``;
+
+export const Placeholder = styled.div`
+  display: none;
+  position: absolute;
+  top: -60px;
+  left: 0;
+`;

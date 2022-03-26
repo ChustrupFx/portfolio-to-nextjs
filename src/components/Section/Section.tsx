@@ -1,5 +1,10 @@
 import Container from "../Container/Container";
-import { Section as StylizedSection, Title, Content } from "./style";
+import {
+  Section as StylizedSection,
+  Title,
+  Content,
+  Placeholder,
+} from "./style";
 
 type SectionProps = {
   title: string;
@@ -9,7 +14,8 @@ type SectionProps = {
 const Section: React.FC<SectionProps> = ({ title, children, id }) => {
   return (
     <>
-      <StylizedSection id={id}>
+      <StylizedSection>
+        <Placeholder id={id}></Placeholder>
         <Container>
           <Title>{title}</Title>
           <Content>{children}</Content>
