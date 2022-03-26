@@ -14,6 +14,7 @@ export const MainSectionContainer = styled.section`
   background-image: url("/images/code-screen-bg.jpg");
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   z-index: 1;
 
   &::before {

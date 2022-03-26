@@ -7,6 +7,6 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterText = styled.span`
-  color: black;
+  color: white;
   font-size: 20px;
 `;
