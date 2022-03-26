@@ -1,8 +1,25 @@
+import { useCallback, useEffect, useState } from "react";
 import { Header as H, Nav, NavList, ListItem, ItemLink } from "./style";
 
 const Header: React.FC = () => {
+  const [blackBG, setBlackBG] = useState(false);
+  const onScroll = useCallback((e: Event) => {
+    if (window.scrollY > 60) {
+      setBlackBG(true);
+    } else {
+      setBlackBG(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("scroll", onScroll);
+
+    return () => {
+      document.removeEventListener("scroll", onScroll);
+    };
+  }, []);
   return (
-    <H>
+    <H blackBG={blackBG}>
       <Nav>
         <NavList>
           <ListItem>

@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import mediaQueries from "../../styles/mediaQueries";
 
-export const Header = styled.header`
+type headerProps = {
+  blackBG: boolean;
+};
+
+export const Header = styled.header<headerProps>`
   width: 100%;
   height: 60px;
   background-color: transparent;
   position: fixed;
   top: 0;
   z-index: 10;
+  background-color: ${(props) =>
+    props.blackBG ? "rgba(0, 0, 0, 0.5)" : "transparent"};
+  transition: background-color 300ms;
 
   @media (max-width: ${mediaQueries.medium}) {
     display: none;
