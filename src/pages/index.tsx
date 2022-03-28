@@ -22,7 +22,9 @@ const MainSection = dynamic(
 
 const Home: NextPage = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      disable: "phone",
+    });
   }, []);
 
   return (
