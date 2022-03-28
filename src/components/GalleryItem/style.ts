@@ -58,17 +58,15 @@ export const LightBox = styled.div`
   left: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 80px calc(100% - 80px * 2) 80px;
   animation: ${LightBoxOpeningAnimation} 300ms ease-in-out 1 both;
 `;
 
 const ActionAndDescriptionCSS = css`
-  position: absolute;
-
-  padding: 15px;
+  padding: 0 15px;
   width: 100%;
+  height: 100%;
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 12;
@@ -77,8 +75,6 @@ const ActionAndDescriptionCSS = css`
 
 export const Actions = styled.div`
   ${ActionAndDescriptionCSS}
-  right: 0;
-  top: 0;
   justify-content: flex-end;
 `;
 export const ActionButton = styled.button`
@@ -88,7 +84,7 @@ export const ActionButton = styled.button`
   padding: 0 5px;
 
   & svg {
-    font-size: 30px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.5);
     transition: color 100ms;
   }
@@ -98,8 +94,9 @@ export const ActionButton = styled.button`
   }
 `;
 
+export const LightboxContent = styled.div``;
+
 export const LigtboxImage = styled.img<LightBoxImageProps>`
-  height: 80%;
   cursor: ${(props) =>
     props.zooming ? (props.grabbing ? "grabbing" : "grab") : "default"};
   transform: ${(props) => (props.zooming ? "scale(3)" : "scale(1)")};
@@ -107,12 +104,14 @@ export const LigtboxImage = styled.img<LightBoxImageProps>`
   position: relative;
   top: 0;
   left: 0;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  text-align: center;
 `;
 
 export const Description = styled.div`
   ${ActionAndDescriptionCSS}
-  bottom: 0;
-  left: 0;
   justify-content: center;
   flex-direction: column;
   font-size: 1.4rem;

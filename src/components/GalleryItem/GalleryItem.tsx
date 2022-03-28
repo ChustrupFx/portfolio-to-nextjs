@@ -8,6 +8,7 @@ import {
   Description,
   DescriptionText,
   VisitLinkBtn,
+  LightboxContent,
 } from "./style";
 import {
   AiOutlineClose,
@@ -59,6 +60,21 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
               <AiOutlineClose />
             </ActionButton>
           </Actions>
+          <LightboxContent>
+            <LigtboxImage
+              src={coverImage}
+              alt={alt}
+              zooming={zooming}
+              grabbing={grabbing}
+              ref={imageRef}
+              onMouseDown={() => setGrabbing(zooming ? true : false)}
+              onMouseUp={(e) => {
+                setGrabbing(false);
+                imageRef.current!.style.transform = "";
+              }}
+              onMouseMove={handleLightboxImageMouseMove}
+            />
+          </LightboxContent>
           {(description || visitLink) && (
             <Description>
               {description && (
@@ -73,19 +89,6 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
               )}
             </Description>
           )}
-          <LigtboxImage
-            src={coverImage}
-            alt={alt}
-            zooming={zooming}
-            grabbing={grabbing}
-            ref={imageRef}
-            onMouseDown={() => setGrabbing(zooming ? true : false)}
-            onMouseUp={(e) => {
-              setGrabbing(false);
-              imageRef.current!.style.transform = "";
-            }}
-            onMouseMove={handleLightboxImageMouseMove}
-          />
         </LightBox>
       )}
     </>
