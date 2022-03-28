@@ -23,7 +23,7 @@ class MyDocument extends Document {
             name="keywords"
             content="portfolio, web developer, desenvolvedor web, html, css, javascript, typescript, node, react, victor, freelancer, works,"
           />
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="Portuguese" />
           <meta name="revisit-after" content="7 days" />
           <meta name="author" content="Victor Inácio" />
