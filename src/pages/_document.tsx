@@ -13,6 +13,20 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Victor Inácio - Desenvolvedor Web</title>
+          <meta name="title" content="Victor Inácio - Desenvolvedor Web" />
+          <meta
+            name="description"
+            content="Portfólio do Victor Inácio, desenvolvedor web."
+          />
+          <meta
+            name="keywords"
+            content="portfolio, web developer, desenvolvedor web, html, css, javascript, typescript, node, react, victor, freelancer, works,"
+          />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="Portuguese" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="author" content="Victor Inácio" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
