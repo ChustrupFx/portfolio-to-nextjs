@@ -33,7 +33,7 @@ const MainSection: React.FC = () => {
   return (
     <MainSectionContainer>
       <Texts>
-        <Name>{name}</Name>
+        <Name>{name || "Victor Inácio"}</Name>
 
         <Occupation
           data-aos={"zoom-in"}
