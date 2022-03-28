@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQueries from "../../styles/mediaQueries";
 
 export const Section = styled.section`
   width: 100%;
@@ -21,4 +22,8 @@ export const Placeholder = styled.div`
   position: absolute;
   top: -60px;
   left: 0;
+
+  @media (max-width: ${mediaQueries.small}) {
+    top: 0;
+  }
 `;
